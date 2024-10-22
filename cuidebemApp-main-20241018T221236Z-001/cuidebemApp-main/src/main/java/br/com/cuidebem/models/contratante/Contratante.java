@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -21,7 +22,7 @@ public class Contratante {
     private String cpf;
     private String nome;
     private String sobreNome;
-    private String dataNascimento;
+    private LocalDate dataNascimento;
     private String telefone;
     private String grauDeParentesco;
     private String motivoDaContratacao;

@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
+import java.time.LocalDate;
 
 @Entity
 @AllArgsConstructor
@@ -19,12 +19,12 @@ public class Idoso {
     private String cpf;
     private String nome;
     private String sobreNome;
-    private String dataNascimento;
+    private LocalDate dataNascimento;
     private String telefone;
     private boolean pcd;
     private String mobilidade;
     @OneToMany
-    private List<Informacao> informacao;
+    private Informacao informacao;
     @Embedded
     private Endereco endereco;
 }

@@ -1,6 +1,8 @@
 package br.com.cuidebem.controllers;
 
 import br.com.cuidebem.models.acompanhante.Acompanhante;
+import br.com.cuidebem.models.acompanhante.AcompanhanteRequest;
+import br.com.cuidebem.models.acompanhante.AcompanhanteResponse;
 import br.com.cuidebem.services.AcompanhanteService;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -18,9 +20,9 @@ public class AcompanhanteController {
     }
 
     @PostMapping
-    public ResponseEntity save(@RequestBody Acompanhante acompanhante){
-        var aux = acompanhanteService.criar(acompanhante);
-        return ResponseEntity.ok(aux);
+    public ResponseEntity save(@RequestBody AcompanhanteRequest acompanhante){
+        var aux = acompanhanteService.criar(acompanhante.toAcompanhante());
+        return ResponseEntity.ok(new AcompanhanteResponse(aux));
     }
 
     @GetMapping

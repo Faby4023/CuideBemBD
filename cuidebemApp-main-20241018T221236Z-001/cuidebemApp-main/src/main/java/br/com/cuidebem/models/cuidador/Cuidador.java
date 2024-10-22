@@ -9,6 +9,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -20,7 +22,7 @@ public class Cuidador {
     private String cpf;
     private String nome;
     private String sobreNome;
-    private String dataNascimento;
+    private LocalDate dataNascimento;
     private String telefone;
     private String antecedentes;
     private boolean ativo;

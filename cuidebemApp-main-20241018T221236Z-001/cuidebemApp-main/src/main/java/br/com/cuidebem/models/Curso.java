@@ -1,13 +1,10 @@
 package br.com.cuidebem.models;
 
-import br.com.cuidebem.models.idoso.Informacao;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -23,6 +20,5 @@ public class Curso {
     public String instituicao;
     public String periodo;
     public String certificacao;
-
 
 }

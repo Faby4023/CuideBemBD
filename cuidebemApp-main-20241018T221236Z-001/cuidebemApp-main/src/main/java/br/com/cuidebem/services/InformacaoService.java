@@ -16,7 +16,7 @@ public class InformacaoService {
         this.informacaoRepository = informacaoRepository;
     }
 
-    public Informacao criar(Informacao informacao) {
+    public Informacao save(Informacao informacao) {
         return informacaoRepository.save(informacao);
     }
 
@@ -51,5 +51,3 @@ public class InformacaoService {
         return informacaoRepository.findById(id).orElse(null);
     }
 }
-
-
